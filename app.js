@@ -36,10 +36,8 @@ const item3 = new Item({
 const defaultItems = [item1, item2, item3];
 
 async function main() {
-  // await mongoose.connect(
-  //   "mongodb+srv://admin-akash:Test123@cluster0.ap1lwce.mongodb.net/todolistDB"
-  // );
-  await mongoose.connect("mongodb://127.0.0.1:27017/todolistDB");
+  await mongoose.connect("mongodb+srv://admin-akash:Test123@cluster0.ap1lwce.mongodb.net/todolistDB");
+  //await mongoose.connect("mongodb://127.0.0.1:27017/todolistDB");
 
   app.get("/", function (req, res) {
     Item.find({})
